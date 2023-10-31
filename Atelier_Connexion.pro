@@ -33,6 +33,7 @@ SOURCES += \
 HEADERS += \
         mainwindow.h \
     connection.h \
+    produit.h \
     produit.h
 
 FORMS += \

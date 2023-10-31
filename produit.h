@@ -1,25 +1,28 @@
 #ifndef PRODUIT_H
 #define PRODUIT_H
+#include <QString>
 #include <QSqlQuery>
 #include <QSqlQueryModel>
-
-class produit
+class Produit
 {
-    QString type,date;
-    int id;
-    float quantity,prix;
+    QString type,dater;
+    int id,quantity,prix;
 public:
-
-    produit();
-    produit(int,QString,QString,float,float);
-    QString gettype(){return type;}
-    QString getdate(){return date;}
-    int getid(){return id;}
-    float getquantity(){return quantity;}
-    float getprix(){return prix;}
-    bool ajouter();
-    QSqlQueryModel * afficher();
-    bool supprimer(int);
+    Produit();
+    Produit(QString,QString,int,int,int);
+        QString gettype();
+        QString getdater();
+        int getid();
+        int getquantity();
+        int getprix();
+        void settype(QString);
+        void setdater(QString);
+        void setid(int);
+        void setquantity(int);
+        void setprix(int);
+        bool ajouter();
+        QSqlQueryModel * afficher();
+        bool supprimer(int );
 };
 
 #endif // PRODUIT_H

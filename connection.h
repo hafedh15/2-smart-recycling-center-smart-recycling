@@ -9,8 +9,8 @@ class Connection
   QSqlDatabase db;
 public:
     Connection();
-    void closeconnect();
     bool createconnect();
+    void closeconnect();
 };
 
 #endif // CONNECTION_H

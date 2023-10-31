@@ -1,6 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
+#include "produit.h"
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
@@ -15,10 +15,14 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+
 private slots:
-    void on_pushButton_clicked();
+    void on_valider_clicked();
+
+    void on_pb_supprimer_clicked();
 
 private:
     Ui::MainWindow *ui;
+    Produit p;
 };
 #endif // MAINWINDOW_H
